@@ -1,8 +1,10 @@
 import "../index.css";
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
-import About from "./About";
+import Jokes from "./Jokes";
 import Navbar from "@/components/Navbar";
+import Quotes from "./Quotes";
+import Memes from "./Memes";
 
 function App() {
   return (
@@ -12,7 +14,9 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
+        <Route path="/Jokes" element={<Jokes />} />
+        <Route path="/Quotes" element={<Quotes />} />
+        <Route path="/Memes" element={<Memes />} />
       </Routes>
 
       </Router>
