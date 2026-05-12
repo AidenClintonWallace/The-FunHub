@@ -1,5 +1,5 @@
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardAction,
@@ -7,7 +7,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 
 export function CardImage() {
   return (
@@ -32,5 +32,5 @@ export function CardImage() {
         <Button className="w-full">View Event</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

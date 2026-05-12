@@ -1,5 +1,5 @@
 import "../index.css";
-import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Jokes from "./Jokes";
 import Navbar from "@/components/Navbar";
@@ -10,15 +10,14 @@ function App() {
   return (
     <div className="bg-blue-100 flex flex-col font-serif">
       <Router>
-      <Navbar />
+        <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Jokes" element={<Jokes />} />
-        <Route path="/Quotes" element={<Quotes />} />
-        <Route path="/Memes" element={<Memes />} />
-      </Routes>
-
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Jokes" element={<Jokes />} />
+          <Route path="/Quotes" element={<Quotes />} />
+          <Route path="/Memes" element={<Memes />} />
+        </Routes>
       </Router>
     </div>
   );

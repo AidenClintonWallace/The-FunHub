@@ -7,13 +7,11 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full shadow-lg z-50 bg-white/30 backdrop-blur-md">
-
       {/* Top bar */}
       <div className="flex justify-between items-center p-4">
-
         {/* Logo */}
         <Link to="/">
-        <div className="font-bold text-xl">FunHub</div>
+          <div className="font-bold text-xl">FunHub</div>
         </Link>
 
         {/* Desktop Menu */}
@@ -36,13 +34,9 @@ export default function Navbar() {
         </div>
 
         {/* Hamburger Button */}
-        <button
-          className="md:hidden text-2xl"
-          onClick={() => setOpen(!open)}
-        >
+        <button className="md:hidden text-2xl" onClick={() => setOpen(!open)}>
           {open ? <X /> : <Menu />}
         </button>
-
       </div>
 
       {/* Mobile Menu */}
@@ -57,7 +51,6 @@ export default function Navbar() {
           </Link>
         </div>
       )}
-
     </nav>
   );
 }

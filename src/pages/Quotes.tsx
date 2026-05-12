@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Button } from "@/components/ui/button";
 
-interface Quote{
+interface Quote {
   quote: string;
   author: string;
 }
@@ -29,31 +29,30 @@ export default function Quotes() {
 
   return (
     <>
-    <div className="flex flex-col items-center justify-center h-screen gap-4">
-      <Button
-        onClick={fetchQuote}
-        disabled={loading}
-        className=" hover:cursor-pointer w-30 h-30 px-4 py-2 bg-purple-500 text-white rounded-full disabled:opacity-50"
-      >
-        {loading ? "Loading..." : "Generate Quote"}
-      </Button>
+      <div className="flex flex-col items-center justify-center h-screen gap-4">
+        <Button
+          onClick={fetchQuote}
+          disabled={loading}
+          className=" hover:cursor-pointer w-30 h-30 px-4 py-2 bg-purple-500 text-white rounded-full disabled:opacity-50"
+        >
+          {loading ? "Loading..." : "Generate Quote"}
+        </Button>
 
-      {loading && (
-        <div className="mt-4 flex items-center gap-2">
-          <div className="w-5 h-5 border-2 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
-          <span>Fetching quote...</span>
-        </div>
-      )}
+        {loading && (
+          <div className="mt-4 flex items-center gap-2">
+            <div className="w-5 h-5 border-2 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+            <span>Fetching quote...</span>
+          </div>
+        )}
 
-      {quote && !loading && (
-        <div className="mt-6 max-w-md p-6 bg-white shadow-lg rounded-xl text-center">
-          <p className="text-xl italic">"{quote.quote}"</p>
+        {quote && !loading && (
+          <div className="mt-6 max-w-md p-6 bg-white shadow-lg rounded-xl text-center">
+            <p className="text-xl italic">"{quote.quote}"</p>
 
-          <p className="mt-4 font-bold">- {quote.author}</p>
-        </div>
-      )}
+            <p className="mt-4 font-bold">- {quote.author}</p>
+          </div>
+        )}
       </div>
-
     </>
   );
 }
