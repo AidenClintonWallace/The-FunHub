@@ -102,7 +102,7 @@ backend/
 ## Clone the Repository
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/AidenClintonWallace/The-FunHub-FrontEnd.git
 ```
 
 ---
